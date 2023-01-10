@@ -21,7 +21,7 @@ export const PreviousSearch = ({ city, details }: Props) => {
 
   const handlePrevSearch = async () => {
     await dispatch(getWeatherOnCityTyped(city));
-    // navigation.navigate("Weather");
+    navigation.navigate("Clima");
   };
 
   return (
