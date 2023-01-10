@@ -13,7 +13,7 @@ module.exports = function(api) {
           blacklist: null, // DEPRECATED
           whitelist: null, // DEPRECATED
           safe: false,
-          allowUndefined: false,
+          allowUndefined: true,
         },
       ],
     ],
