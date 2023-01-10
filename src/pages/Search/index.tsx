@@ -27,14 +27,14 @@ export const SearchPage = () => {
 
   const handleSubmitCityTyped = async () => {
     if (cityTyped.length === 0) {
-      dispatch(setErrorMessage("location is empty."));
+      dispatch(setErrorMessage("Localização vazia."));
       return;
     }
     const wasFound = await dispatch(getWeatherOnCityTyped(cityTyped));
 
     if (wasFound === false) return;
 
-    // navigation.navigate('Weather');
+    navigation.navigate("Clima");
     setCityTyped("");
     dispatch(setErrorMessage(""));
   };
@@ -44,7 +44,7 @@ export const SearchPage = () => {
 
     if (wasFound === false) return;
 
-    // navigation.navigate('Weather');
+    navigation.navigate("Clima");
     setCityTyped("");
     dispatch(setErrorMessage(""));
   };
@@ -69,7 +69,7 @@ export const SearchPage = () => {
             <>
               <Button onPress={handleSubmitCityTyped}>Enviar</Button>
               <Button onPress={handleSubmitCurrentLocation}>
-                <MaterialIcons name="gps-fixed" size={30} color="white" />
+                <MaterialIcons name="gps-fixed" size={25} color="white" />
                 Localização
               </Button>
             </>

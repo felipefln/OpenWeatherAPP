@@ -91,7 +91,9 @@ export const getWeatherOnCurrentLocation = () => {
     try {
       const { status } = await Location.requestForegroundPermissionsAsync();
       if (status !== "granted") {
-        setErrorMessage("Access to location is needded to run the app.");
+        setErrorMessage(
+          "O acesso a lolização é necessário para executar o aplicativo"
+        );
         return;
       }
       const location = await Location.getCurrentPositionAsync();
